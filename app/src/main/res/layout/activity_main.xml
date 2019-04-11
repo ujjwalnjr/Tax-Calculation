@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:id="@+id/txt_title"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:background="#ccc"
+        android:text="Tax Calculation" />
+
+    <TextView
+        android:id="@+id/tv_salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/txt_title"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+        android:text="Salary :" />
+
+    <EditText
+        android:id="@+id/et_salary"
+        android:layout_below="@id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_salary"
+        android:padding="10dp"
+        android:inputType="numberDecimal"
+        android:hint="Enter Your Monthly Salary"
+        android:layout_marginTop="15dp"
+        android:textColor="#000"/>
+
+    <Button
+        android:id="@+id/btn_tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_salary"
+        android:text="Calculate Tax"
+        android:onClick="calculate_tax"
+        android:padding="10dp"
+        android:background="#505e23"
+        android:textColor="#FCFBFB"
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_tax"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:text="The Total Tax Amount is :"/>
+
+</RelativeLayout>
